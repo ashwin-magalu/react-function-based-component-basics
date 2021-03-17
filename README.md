@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# React-Redux Interview Guide
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React
 
-## Available Scripts
+1. what do you like and dislike about React?
+   a. Love unidirectional flow from parent to child and the fact that React is pretty much javascript.
+   b. Disliked JSX.
 
-In the project directory, you can run:
+2. Conditional rendering and list rendering?
+   a. What is the significance of having the key prop when rendering a list of elements.
+   b. What is a potential bug that you can introduce when using index as key
 
-### `npm start`
+3. Class component's lifecycle methods.
+   a. There will always be legacy code that you need to maintain
+   b. Learn the mounting phase, the updation phase and the unmounting phase methods
+   c. Order of invocation and a brief description of when you'd use each of them
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4. Context API
+   a. What is prop drilling, how can you overcome that using the context API
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+5. Hooks
+   a. What was the need for Hooks?
+   b. useState, useEffect and useContext
 
-### `npm test`
+6. Optimization
+   a. Pure components
+   b. memo
+   c. useMemo and useCallback
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+7. How to share logic across components?
+   a. Higher Order Components
+   b. Render props pattern
+   c. Custom hooks
 
-### `npm run build`
+8. What are some of the packages that you use along with React?
+   a. Styling
+   b. Routing
+   c. Form Handling
+   d. State management
+   e. CRA vs Custom webpack config
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Redux
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. What is Redux?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. How do you decide whether to choose Context API or Redux?
 
-### `npm run eject`
+3. What is the Redux store?
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. What are actions?
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. What are action creators?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+6. What are reducers?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+7. How the control flows between these different parts?
 
-## Learn More
+8. What exactly does the connect function do from the react-redux library?
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+9. What do mapStateToProps and mapDispatchToProps actually do?
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+10. Why should you dispatch an action to update the state and not update store directly?
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+11. In a reducer, why should you return a new object as state and not modify the existing state object?
